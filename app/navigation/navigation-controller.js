@@ -1,6 +1,6 @@
 'use strict';
 (function() {
-    angular.module('TimeWaste').controller('NavigationController', ['$scope', '$http', '$state', function($scope, $http, $state) {
+    angular.module('DemoMean').controller('NavigationController', ['$scope', '$http', '$state', function($scope, $http, $state) {
         $scope.loginUser = function() {
             $http.post('api/user/login', $scope.user).success(function(response) {
                 localStorage.setItem('User-Date', JSON.stringify(response));

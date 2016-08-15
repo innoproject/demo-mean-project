@@ -1,6 +1,6 @@
 'use strict';
 (function() {
-    angular.module('TimeWaste').controller('SignUpController', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    angular.module('DemoMean').controller('SignUpController', ['$scope', '$state', '$http', function($scope, $state, $http) {
           $scope.createUser = function() {
               $http.post('/api/user/signup', $scope.newuser).success(function(response) {
 
