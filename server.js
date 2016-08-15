@@ -4,7 +4,7 @@ var bodyParser     = require('body-parser');
 var authenticationController = require('./server/controllers/authentication-controller');
 
 var app = express();
-mongoose.connect('mongodb://localhost:27017/time-waste');
+mongoose.connect('mongodb://localhost:27017/demomean');
 
 app.use(bodyParser.json());
 app.use('/app', express.static(__dirname + '/app'));
@@ -19,6 +19,6 @@ app.get('/', function(req, res) {
 app.post('/api/user/signup', authenticationController.signup);
 app.post('/api/user/login', authenticationController.login);
 
-app.listen(3000, function() {
-    console.log("Listening for localhost:3000");
+app.listen(3002, function() {
+    console.log("Listening for localhost:3002");
 });
